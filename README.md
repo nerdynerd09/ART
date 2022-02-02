@@ -9,7 +9,7 @@
 
 - Python3
 - Golang >1.16v
-
+- Install required modules using - 
 ```
 pip install -r requirements.txt
 ```
