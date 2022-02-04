@@ -18,7 +18,6 @@ class ParamterDiscovery:
         else:
             domain = domain + '/'
 
-        # print(f"Final domain for arjun {domain}")
         try:
             os.mkdir('results/parameter')
         except FileExistsError:

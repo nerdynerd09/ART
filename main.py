@@ -54,7 +54,6 @@ class ART(object):
 
         # Finding Subdomains
         if(self.args.subdomain == True):
-            # subdomain.Subdomain.phpInfo(self,self.args.domain)    
             subdomain.Subdomain.assetfinder(self,self.args.domain)  
 
         # Crawling the target
