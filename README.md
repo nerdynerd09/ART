@@ -11,7 +11,7 @@
 - Golang >1.16v
 - Install required modules using - 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 # Running the code
