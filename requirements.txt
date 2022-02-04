@@ -1,6 +1,5 @@
-animation
-requests
-colorama
-argparse
-whois
-shutil
+animation==0.0.7
+requests==2.27.1
+colorama==0.4.4
+argparse==1.4.0
+whois==0.9.13
