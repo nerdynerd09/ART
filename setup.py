@@ -19,6 +19,21 @@ def scriptSetup():
 
     # Arjun
     subprocess.check_output(['pip3','install','arjun'])
-    
-    
 
+    # Animation
+    subprocess.check_output(['pip3','install','animation'])
+    
+    # Requests
+    subprocess.check_output(['pip3','install','requests'])
+    
+    # Colorama
+    subprocess.check_output(['pip3','install','colorama'])
+    
+    # Argparse
+    subprocess.check_output(['pip3','install','argparse'])
+
+    # Whois
+    subprocess.check_output(['pip3','install','whois'])
+
+    # Shutil
+    subprocess.check_output(['pip3','install','shutil'])
