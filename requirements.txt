@@ -1,0 +1,6 @@
+animation
+requests
+colorama
+argparse
+whois
+shutil
