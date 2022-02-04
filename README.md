@@ -8,7 +8,7 @@
 # Pre-Requisites 
 
 - Python3
-- Golang >1.16v
+- Golang version >=1.16
 - Install required modules using - 
 ```
 pip3 install -r requirements.txt
