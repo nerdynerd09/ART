@@ -35,5 +35,3 @@ def scriptSetup():
     # Whois
     subprocess.check_output(['pip3','install','whois'])
 
-    # Shutil
-    subprocess.check_output(['pip3','install','shutil'])
