@@ -7,7 +7,7 @@
 
 # Pre-Requisites 
 
-- Python3
+- Python3 (3.9.9 preferred)
 - Golang version >=1.16
 - Install required modules using - 
 ```
