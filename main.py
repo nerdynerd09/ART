@@ -88,16 +88,8 @@ class ART(object):
         except FileExistsError: 
             pass
 
-        # results = subprocess.check_output(['whois',self.args.domain])
-        # if(self.args.whois == True):
-        # whoisInfo = whois.whois(self.args.domain)      
-        # whoisInfo = subprocess.check_output(['whois',self.args.domain])                    
-        # print(whoisInfo)              
         with open('results/whois/whoisInfo.txt','w') as f:
             f.write(subprocess.check_output(['whois',self.args.domain]).decode('utf-8'))
-
-        #     # f.write(str(json.dump(whoisInfo,f,indent=4,default=str)))
-        #     json.dump(whoisInfo,f,indent=4,default=str)
         print(f"\n{Fore.GREEN} [+] {Fore.RESET}Done!!\n{Fore.RED} [+]{Fore.RESET} Whois information for {self.args.domain} is saved in results/whois/whoisInfo.json")
        
 
