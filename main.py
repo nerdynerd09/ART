@@ -1,6 +1,6 @@
 import subdomain,crawler,parameter,jsFinder,gitFinder,setup
 import os
-import animation
+import animation,subprocess
 import argparse
 import sys,time
 import whois
@@ -81,18 +81,24 @@ class ART(object):
             parameter.ParamterDiscovery.arjun(self,self.args.domain)
                
 
-    @animation.wait(animation='spinner',text="[*] Fetching Whois info....")
+    @animation.wait(animation='spinner',text=" [*] Fetching Whois info....")
     def whois(self):
         try:
-            os.mkdir('whois')
+            os.mkdir('results/whois')
         except FileExistsError: 
             pass
-        if(self.args.whois == True):
-            whoisInfo = whois.whois(self.args.domain)                    
-            with open('whois/whoisInfo.json','w') as f:
-                # f.write(json.dump(whoisInfo,indent=4,default=str))
-                json.dump(whoisInfo,f,indent=4,default=str)
-            print(f"\n{Fore.GREEN}[+] {Fore.RESET}Done!!\n{Fore.RED}[+]{Fore.RESET} Whois information for {self.args.domain} is saved in whois/whoisInfo.json")
+
+        # results = subprocess.check_output(['whois',self.args.domain])
+        # if(self.args.whois == True):
+        # whoisInfo = whois.whois(self.args.domain)      
+        # whoisInfo = subprocess.check_output(['whois',self.args.domain])                    
+        # print(whoisInfo)              
+        with open('results/whois/whoisInfo.txt','w') as f:
+            f.write(subprocess.check_output(['whois',self.args.domain]).decode('utf-8'))
+
+        #     # f.write(str(json.dump(whoisInfo,f,indent=4,default=str)))
+        #     json.dump(whoisInfo,f,indent=4,default=str)
+        print(f"\n{Fore.GREEN} [+] {Fore.RESET}Done!!\n{Fore.RED} [+]{Fore.RESET} Whois information for {self.args.domain} is saved in results/whois/whoisInfo.json")
        
 
 art = ART()
