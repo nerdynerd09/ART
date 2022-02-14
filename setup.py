@@ -1,37 +1,28 @@
-import subprocess
-import shutil
-import animation
+from setuptools import setup, find_packages
+import codecs
+import os
 
-@animation.wait(animation='spinner',text=' [*] Setting Up Environment for You!!')
-def scriptSetup():
+here = os.path.abspath(os.path.dirname(__file__))
 
-    #Waybackurls
-    subprocess.check_output(['go','install','github.com/tomnomnom/waybackurls@latest'])
-    shutil.copy('/root/go/bin/waybackurls','/usr/local/bin')
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
 
-    #Gau
-    subprocess.check_output(['go','install','github.com/lc/gau/v2/cmd/gau@latest'])
-    shutil.copy('/root/go/bin/gau','/usr/local/bin')
+VERSION = '1.0.0'
+DESCRIPTION = 'Advance Recon Tool'
+LONG_DESCRIPTION = 'A tool for automating recon'
 
-    # Assetfinder
-    subprocess.check_output(['go','install','github.com/tomnomnom/assetfinder@latest'])
-    shutil.copy('/root/go/bin/assetfinder','/usr/local/bin')
-
-    # Arjun
-    subprocess.check_output(['pip3','install','arjun'])
-
-    # Animation
-    subprocess.check_output(['pip3','install','animation'])
-    
-    # Requests
-    subprocess.check_output(['pip3','install','requests'])
-    
-    # Colorama
-    subprocess.check_output(['pip3','install','colorama'])
-    
-    # Argparse
-    subprocess.check_output(['pip3','install','argparse'])
-
-    # Whois
-    subprocess.check_output(['pip3','install','whois'])
-
+# Setting up
+setup(
+    name="ART",
+    version=VERSION,
+    author="Nakba",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=long_description,
+    packages=find_packages(),
+    install_requires=['animation', 'requests', 'colorama','argparse','python-whois'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+    ]
+)
