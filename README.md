@@ -9,15 +9,15 @@
 
 - Python3 (3.9.9 preferred)
 - Golang version >=1.16
-- Install required modules using - 
+- Installation - 
 ```
-pip3 install -r requirements.txt
+pip install ART-Recon
 ```
 
 # Running the code
 
 ```
-python3 main.py -d url -h
+art -d url -h
 ```
 
 # Contact 

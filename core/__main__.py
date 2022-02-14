@@ -92,8 +92,8 @@ class ART(object):
             f.write(subprocess.check_output(['whois',self.args.domain]).decode('utf-8'))
         print(f"\n{Fore.GREEN} [+] {Fore.RESET}Done!!\n{Fore.RED} [+]{Fore.RESET} Whois information for {self.args.domain} is saved in results/whois/whoisInfo.json")
        
-
-art = ART()
-art.banner()
-art.setupChekcUp()
-art.intro()
+if __name__== '__main__':
+    art = ART()
+    art.banner()
+    art.setupChekcUp()
+    art.intro()
